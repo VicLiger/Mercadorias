@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MercadoriasAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+671dfcf557b4e5f827bf84d8e7e4273ea4a9cdec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8306a17f16f5f2b7039a8a5d149836751da1650a")]
 [assembly: System.Reflection.AssemblyProductAttribute("MercadoriasAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MercadoriasAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
