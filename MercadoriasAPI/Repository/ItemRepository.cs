@@ -27,7 +27,14 @@ namespace MercadoriasAPI.Repository
 
         public Item DeleteItem(int id)
         {
-            var item = _context.Itens.Find(x => x.Id == id);
+            var item = _context.Itens.Find(id);
+
+            if (item is null)
+                throw new ArgumentNullException(nameof(item));
+
+            _context.Itens.Remove(item);
+            _context.SaveChanges();
+            return item;
         }
 
         public IEnumerable<Item> GetFullItens()

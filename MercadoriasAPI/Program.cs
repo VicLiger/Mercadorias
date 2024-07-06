@@ -9,7 +9,7 @@ string connectionString = builder.Configuration.GetConnectionString("Connection"
 builder.Services.AddDbContext<ItemContext>(options =>
     options.UseNpgsql(connectionString));
 
-builder.Services.AddScoped<IItemRepository, IItemRepository>
+builder.Services.AddScoped<IItemRepository, IItemRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
