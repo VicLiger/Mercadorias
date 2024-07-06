@@ -1,4 +1,5 @@
 using MercadoriasAPI.Context;
+using MercadoriasAPI.Repository;
 using MercadoriasAPI.Repository.Interface;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,7 +10,7 @@ string connectionString = builder.Configuration.GetConnectionString("Connection"
 builder.Services.AddDbContext<ItemContext>(options =>
     options.UseNpgsql(connectionString));
 
-builder.Services.AddScoped<IItemRepository, IItemRepository>();
+builder.Services.AddScoped<IItemRepository, ItemRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

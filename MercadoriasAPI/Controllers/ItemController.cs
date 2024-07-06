@@ -1,62 +1,64 @@
 ﻿using MercadoriasAPI.Models;
-using MercadoriasAPI.Repository;
 using MercadoriasAPI.Repository.Interface;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
 
 namespace MercadoriasAPI.Controllers
 {
-
     [ApiController]
     [Route("[controller]")]
     public class ItemController : ControllerBase
     {
         private readonly IItemRepository _repository;
-        private readonly ILogger _logger;
+        private readonly ILogger<ItemController> _logger;
 
-        public ItemController(ItemRepository repository, ILogger logger)
+        public ItemController(IItemRepository repository, ILogger<ItemController> logger)
         {
             _repository = repository;
             _logger = logger;
         }
 
+
         [HttpGet]
         public ActionResult<IEnumerable<Item>> GetItens()
         {
-            var item = _repository.GetFullItens();
-            return Ok(item);
+            var items = _repository.GetFullItens();
+            return Ok(items);
         }
 
         [HttpGet("{id}")]
-        public ActionResult<IEnumerable<Item>> GetItemById(int id)
+        public ActionResult<Item> GetItemById(int id)
         {
-            var itemById = _repository.GetItemById(id);
+            var item = _repository.GetItemById(id);
 
-            if(itemById is null)
+            if (item == null)
             {
                 _logger.LogWarning($"Item com id = {id} não foi encontrado...");
                 return NotFound($"Item com id = {id} não foi encontrado...");
             }
 
-            return Ok(itemById);
+            return Ok(item);
         }
 
         [HttpPost]
-        public ActionResult CreateItem(Item item)
+        public ActionResult<Item> CreateItem(Item item)
         {
-            if(item is null)
+            if (item == null)
             {
                 _logger.LogWarning("Dados inválidos...");
-                return BadRequest("Dados inválidos...");  
+                return BadRequest("Dados inválidos...");
             }
 
-            var createdItem = _repository.Creatitem(item);
-            return new CreatedAtRouteResult("ObterItem", new { id = createdItem.Id }, createdItem);
+            var createdItem = _repository.CreateItem(item);
+            return CreatedAtAction(nameof(GetItemById), new { id = createdItem.Id }, createdItem);
         }
 
         [HttpPut("{id:int}")]
-        public ActionResult AttItem(int id, Item item)
+        public ActionResult<Item> AttItem(int id, Item item)
         {
-            if(id != item.Id)
+            if (id != item.Id)
             {
                 _logger.LogWarning("Dados inválidos...");
                 return BadRequest("Dados inválidos....");
@@ -66,23 +68,19 @@ namespace MercadoriasAPI.Controllers
             return Ok(item);
         }
 
-
         [HttpDelete("{id:int}")]
-        public ActionResult DeleteItem(int id)
+        public ActionResult<Item> DeleteItem(int id)
         {
             var item = _repository.GetItemById(id);
 
-            if(item is null)
+            if (item == null)
             {
-                _logger.LogWarning($"O item com o id = {id} não foii encontrado");
-                return BadRequest($"O item com o id = {id} não foii encontrado");
+                _logger.LogWarning($"O item com o id = {id} não foi encontrado");
+                return NotFound($"O item com o id = {id} não foi encontrado");
             }
 
-            var itemRemove = _repository.DeleteItem(id);
-            return Ok(itemRemove);
-
+            var deletedItem = _repository.DeleteItem(id);
+            return Ok(deletedItem);
         }
-
-
     }
 }

@@ -1,4 +1,5 @@
 ﻿using MercadoriasAPI.Models;
+using System.Collections.Generic;
 
 namespace MercadoriasAPI.Repository.Interface
 {
@@ -6,9 +7,8 @@ namespace MercadoriasAPI.Repository.Interface
     {
         IEnumerable<Item> GetFullItens();
         Item GetItemById(int id);
-        Item Creatitem(Item item);
+        Item CreateItem(Item item);
         Item UpdateItem(Item item);
         Item DeleteItem(int id);
-
     }
 }
