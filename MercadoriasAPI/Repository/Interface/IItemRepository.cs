@@ -5,8 +5,8 @@ namespace MercadoriasAPI.Repository.Interface
 {
     public interface IItemRepository
     {
-        IEnumerable<Item> GetFullItens();
-        Item GetItemById(int id);
+        Task<IEnumerable<Item>> GetFullItensAsync();
+        Task<Item> GetItemByIdAsync(int id);
         Item CreateItem(Item item);
         Item UpdateItem(Item item);
         Item DeleteItem(int id);

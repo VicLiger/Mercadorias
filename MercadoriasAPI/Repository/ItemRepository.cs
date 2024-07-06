@@ -41,14 +41,14 @@ namespace MercadoriasAPI.Repository
             return item;
         }
 
-        public IEnumerable<Item> GetFullItens()
+        public async Task<IEnumerable<Item>> GetFullItensAsync()
         {
-            return _context.Itens.ToList();
+            return await _context.Itens.ToListAsync();
         }
 
-        public Item GetItemById(int id)
+        public async Task<Item> GetItemByIdAsync(int id)
         {
-            return _context.Itens.FirstOrDefault(x => x.Id == id);
+            return await _context.Itens.FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public Item UpdateItem(Item item)
