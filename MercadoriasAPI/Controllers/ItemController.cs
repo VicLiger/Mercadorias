@@ -22,16 +22,20 @@ namespace MercadoriasAPI.Controllers
 
 
         [HttpGet]
-        public ActionResult<IEnumerable<Item>> GetItens()
+        public async Task<ActionResult<IEnumerable<Item>>> GetItens()
         {
-            var items = _unityOfWork.ItemRepository.GetFullItens();
+            var items = await _unityOfWork.ItemRepository.GetFullItensAsync();
+            
+            if(items is null)
+                return NotFound("Não existe nenhum item na lista");
+
             return Ok(items);
         }
 
         [HttpGet("{id}")]
-        public ActionResult<Item> GetItemById(int id)
+        public async Task<ActionResult<Item>> GetItemById(int id)
         {
-            var item = _unityOfWork.ItemRepository.GetItemById(id);
+            var item = await _unityOfWork.ItemRepository.GetItemByIdAsync(id);
 
             if (item == null)
             {
@@ -71,9 +75,9 @@ namespace MercadoriasAPI.Controllers
         }
 
         [HttpDelete("{id:int}")]
-        public ActionResult<Item> DeleteItem(int id)
+        public async Task<ActionResult<Item>> DeleteItem(int id)
         {
-            var item = _unityOfWork.ItemRepository.GetItemById(id);
+            var item = await _unityOfWork.ItemRepository.GetItemByIdAsync(id);
 
             if (item == null)
             {
