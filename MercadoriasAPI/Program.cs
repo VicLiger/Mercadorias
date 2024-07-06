@@ -11,6 +11,7 @@ builder.Services.AddDbContext<ItemContext>(options =>
     options.UseNpgsql(connectionString));
 
 builder.Services.AddScoped<IItemRepository, ItemRepository>();
+builder.Services.AddScoped<IUnityOfWork, UnityOfWork>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

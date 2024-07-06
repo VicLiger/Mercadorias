@@ -11,12 +11,12 @@ namespace MercadoriasAPI.Controllers
     [Route("[controller]")]
     public class ItemController : ControllerBase
     {
-        private readonly IItemRepository _repository;
+        private readonly IUnityOfWork _unityOfWork;
         private readonly ILogger<ItemController> _logger;
 
-        public ItemController(IItemRepository repository, ILogger<ItemController> logger)
+        public ItemController(IUnityOfWork unityOfWork, ILogger<ItemController> logger)
         {
-            _repository = repository;
+            _unityOfWork = unityOfWork;
             _logger = logger;
         }
 
@@ -24,14 +24,14 @@ namespace MercadoriasAPI.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Item>> GetItens()
         {
-            var items = _repository.GetFullItens();
+            var items = _unityOfWork.ItemRepository.GetFullItens();
             return Ok(items);
         }
 
         [HttpGet("{id}")]
         public ActionResult<Item> GetItemById(int id)
         {
-            var item = _repository.GetItemById(id);
+            var item = _unityOfWork.ItemRepository.GetItemById(id);
 
             if (item == null)
             {
@@ -51,7 +51,8 @@ namespace MercadoriasAPI.Controllers
                 return BadRequest("Dados inválidos...");
             }
 
-            var createdItem = _repository.CreateItem(item);
+            var createdItem = _unityOfWork.ItemRepository.CreateItem(item);
+            _unityOfWork.Commit();
             return CreatedAtAction(nameof(GetItemById), new { id = createdItem.Id }, createdItem);
         }
 
@@ -64,14 +65,15 @@ namespace MercadoriasAPI.Controllers
                 return BadRequest("Dados inválidos....");
             }
 
-            _repository.UpdateItem(item);
+            _unityOfWork.ItemRepository.UpdateItem(item);
+            _unityOfWork.Commit();
             return Ok(item);
         }
 
         [HttpDelete("{id:int}")]
         public ActionResult<Item> DeleteItem(int id)
         {
-            var item = _repository.GetItemById(id);
+            var item = _unityOfWork.ItemRepository.GetItemById(id);
 
             if (item == null)
             {
@@ -79,7 +81,8 @@ namespace MercadoriasAPI.Controllers
                 return NotFound($"O item com o id = {id} não foi encontrado");
             }
 
-            var deletedItem = _repository.DeleteItem(id);
+            var deletedItem = _unityOfWork.ItemRepository.DeleteItem(id);
+            _unityOfWork.Commit();
             return Ok(deletedItem);
         }
     }

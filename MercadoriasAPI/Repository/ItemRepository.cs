@@ -23,7 +23,7 @@ namespace MercadoriasAPI.Repository
                 throw new ArgumentNullException(nameof(item));
 
             _context.Itens.Add(item);
-            _context.SaveChanges();
+            //_context.SaveChanges();
 
             return item;
         }
@@ -36,7 +36,7 @@ namespace MercadoriasAPI.Repository
                 throw new ArgumentNullException(nameof(item));
 
             _context.Itens.Remove(item);
-            _context.SaveChanges();
+            //_context.SaveChanges();
 
             return item;
         }
@@ -57,7 +57,7 @@ namespace MercadoriasAPI.Repository
                 throw new ArgumentNullException(nameof(item));
 
             _context.Entry(item).State = EntityState.Modified;
-            _context.SaveChanges();
+            //_context.SaveChanges();
 
             return item;
         }
