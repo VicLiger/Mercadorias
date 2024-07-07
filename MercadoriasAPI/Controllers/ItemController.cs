@@ -1,4 +1,5 @@
 ﻿using MercadoriasAPI.DTOs;
+using MercadoriasAPI.DTOs.Mappings;
 using MercadoriasAPI.Models;
 using MercadoriasAPI.Repository.Interface;
 using Microsoft.AspNetCore.Mvc;
@@ -30,22 +31,9 @@ namespace MercadoriasAPI.Controllers
             if(items is null)
                 return NotFound("Não existe nenhum item na lista");
 
-            var itemListDTO = new List<ItemDTO>();
+            
 
-            foreach(var item in items)
-            {
-                var itemDTO = new ItemDTO
-                {
-                    Id = item.Id,
-                    Nome = item.Nome,
-                    Descricao = item.Descricao,
-                    Preco = item.Preco,
-                    Codigo = item.Codigo
-
-                };
-
-                itemListDTO.Add(itemDTO);
-            }
+            var itemListDTO = items.ToItemDTOList();
 
             return Ok(itemListDTO);
         }
@@ -59,17 +47,9 @@ namespace MercadoriasAPI.Controllers
             {
                 _logger.LogWarning($"Item com id = {id} não foi encontrado...");
                 return NotFound($"Item com id = {id} não foi encontrado...");
-            }
+            } 
 
-            var itemDTO = new ItemDTO
-            {
-                Id = item.Id,
-                Nome = item.Nome,
-                Descricao = item.Descricao,
-                Preco = item.Preco,
-                Codigo = item.Codigo
-
-            };
+            var itemDTO = item.ToItemDTO();
 
             return Ok(item);
         }
@@ -85,27 +65,12 @@ namespace MercadoriasAPI.Controllers
                 return BadRequest("Dados inválidos...");
             }
 
-            var item = new Item()
-            {
-                Id = itemDTO.Id,
-                Nome = itemDTO.Nome,
-                Descricao = itemDTO.Descricao,
-                Preco = itemDTO.Preco,
-                Codigo = itemDTO.Codigo
-            };
+            var item = itemDTO.ToItem();
 
             var createdItem = _unityOfWork.ItemRepository.CreateItem(item);
             _unityOfWork.Commit();
 
-            var newItemDTO = new ItemDTO
-            {
-                Id = createdItem.Id,
-                Nome = createdItem.Nome,
-                Descricao = createdItem.Descricao,
-                Preco = createdItem.Preco,
-                Codigo = createdItem.Codigo
-
-            };
+            var newItemDTO = createdItem.ToItemDTO();
 
 
             return CreatedAtAction(nameof(GetItemById), new { id = newItemDTO.Id }, newItemDTO);
@@ -120,27 +85,12 @@ namespace MercadoriasAPI.Controllers
                 return BadRequest("Dados inválidos....");
             }
 
-            var item = new Item()
-            {
-                Id = itemDTO.Id,
-                Nome = itemDTO.Nome,
-                Descricao = itemDTO.Descricao,
-                Preco = itemDTO.Preco,
-                Codigo = itemDTO.Codigo
-            };
+            var item = itemDTO.ToItem();
 
             var AttItem = _unityOfWork.ItemRepository.UpdateItem(item);
             _unityOfWork.Commit();
 
-            var newItemDTO = new ItemDTO
-            {
-                Id = AttItem.Id,
-                Nome = AttItem.Nome,
-                Descricao = AttItem.Descricao,
-                Preco = AttItem.Preco,
-                Codigo = AttItem.Codigo
-
-            };
+            var newItemDTO = AttItem.ToItemDTO();
 
 
             return Ok(newItemDTO);
@@ -160,15 +110,7 @@ namespace MercadoriasAPI.Controllers
             var deletedItem = _unityOfWork.ItemRepository.DeleteItem(id);
             _unityOfWork.Commit();
 
-            var newItemDTO = new ItemDTO
-            {
-                Id = deletedItem.Id,
-                Nome = deletedItem.Nome,
-                Descricao = deletedItem.Descricao,
-                Preco = deletedItem.Preco,
-                Codigo = deletedItem.Codigo
-
-            };
+            var newItemDTO = deletedItem.ToItemDTO();
 
             return Ok(newItemDTO);
         }
