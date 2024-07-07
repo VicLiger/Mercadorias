@@ -29,20 +29,22 @@ namespace MercadoriasAPI.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Descrição")
+                    b.Property<string>("Codigo")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<string>("Descrição")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("character varying(250)");
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<decimal>("Preço")
                         .HasColumnType("numeric");
-
-                    b.Property<string>("codigo")
-                        .IsRequired()
-                        .HasColumnType("text");
 
                     b.HasKey("Id");
 

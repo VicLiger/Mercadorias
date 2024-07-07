@@ -1,4 +1,5 @@
-﻿using MercadoriasAPI.Models;
+﻿using MercadoriasAPI.DTOs;
+using MercadoriasAPI.Models;
 using MercadoriasAPI.Repository.Interface;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -22,18 +23,35 @@ namespace MercadoriasAPI.Controllers
 
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Item>>> GetItens()
+        public async Task<ActionResult<IEnumerable<ItemDTO>>> GetItens()
         {
             var items = await _unityOfWork.ItemRepository.GetFullItensAsync();
             
             if(items is null)
                 return NotFound("Não existe nenhum item na lista");
 
-            return Ok(items);
+            var itemListDTO = new List<ItemDTO>();
+
+            foreach(var item in items)
+            {
+                var itemDTO = new ItemDTO
+                {
+                    Id = item.Id,
+                    Nome = item.Nome,
+                    Descricao = item.Descricao,
+                    Preco = item.Preco,
+                    Codigo = item.Codigo
+
+                };
+
+                itemListDTO.Add(itemDTO);
+            }
+
+            return Ok(itemListDTO);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Item>> GetItemById(int id)
+        public async Task<ActionResult<ItemDTO>> GetItemById(int id)
         {
             var item = await _unityOfWork.ItemRepository.GetItemByIdAsync(id);
 
@@ -43,39 +61,93 @@ namespace MercadoriasAPI.Controllers
                 return NotFound($"Item com id = {id} não foi encontrado...");
             }
 
+            var itemDTO = new ItemDTO
+            {
+                Id = item.Id,
+                Nome = item.Nome,
+                Descricao = item.Descricao,
+                Preco = item.Preco,
+                Codigo = item.Codigo
+
+            };
+
             return Ok(item);
         }
 
+        // Explicação: Recebe um item DTO e transforma em item para usar o método de criar item
+        //             depois atribui uma váriavel do item criado e transforma esse item em um itemDTO
         [HttpPost]
-        public ActionResult<Item> CreateItem(Item item)
+        public ActionResult<ItemDTO> CreateItem(ItemDTO itemDTO)
         {
-            if (item == null)
+            if (itemDTO == null)
             {
                 _logger.LogWarning("Dados inválidos...");
                 return BadRequest("Dados inválidos...");
             }
 
+            var item = new Item()
+            {
+                Id = itemDTO.Id,
+                Nome = itemDTO.Nome,
+                Descricao = itemDTO.Descricao,
+                Preco = itemDTO.Preco,
+                Codigo = itemDTO.Codigo
+            };
+
             var createdItem = _unityOfWork.ItemRepository.CreateItem(item);
             _unityOfWork.Commit();
-            return CreatedAtAction(nameof(GetItemById), new { id = createdItem.Id }, createdItem);
+
+            var newItemDTO = new ItemDTO
+            {
+                Id = createdItem.Id,
+                Nome = createdItem.Nome,
+                Descricao = createdItem.Descricao,
+                Preco = createdItem.Preco,
+                Codigo = createdItem.Codigo
+
+            };
+
+
+            return CreatedAtAction(nameof(GetItemById), new { id = newItemDTO.Id }, newItemDTO);
         }
 
         [HttpPut("{id:int}")]
-        public ActionResult<Item> AttItem(int id, Item item)
+        public ActionResult<ItemDTO> AttItem(int id, ItemDTO itemDTO)
         {
-            if (id != item.Id)
+            if (id != itemDTO.Id)
             {
                 _logger.LogWarning("Dados inválidos...");
                 return BadRequest("Dados inválidos....");
             }
 
-            _unityOfWork.ItemRepository.UpdateItem(item);
+            var item = new Item()
+            {
+                Id = itemDTO.Id,
+                Nome = itemDTO.Nome,
+                Descricao = itemDTO.Descricao,
+                Preco = itemDTO.Preco,
+                Codigo = itemDTO.Codigo
+            };
+
+            var AttItem = _unityOfWork.ItemRepository.UpdateItem(item);
             _unityOfWork.Commit();
-            return Ok(item);
+
+            var newItemDTO = new ItemDTO
+            {
+                Id = AttItem.Id,
+                Nome = AttItem.Nome,
+                Descricao = AttItem.Descricao,
+                Preco = AttItem.Preco,
+                Codigo = AttItem.Codigo
+
+            };
+
+
+            return Ok(newItemDTO);
         }
 
         [HttpDelete("{id:int}")]
-        public async Task<ActionResult<Item>> DeleteItem(int id)
+        public async Task<ActionResult<ItemDTO>> DeleteItem(int id)
         {
             var item = await _unityOfWork.ItemRepository.GetItemByIdAsync(id);
 
@@ -87,7 +159,18 @@ namespace MercadoriasAPI.Controllers
 
             var deletedItem = _unityOfWork.ItemRepository.DeleteItem(id);
             _unityOfWork.Commit();
-            return Ok(deletedItem);
+
+            var newItemDTO = new ItemDTO
+            {
+                Id = deletedItem.Id,
+                Nome = deletedItem.Nome,
+                Descricao = deletedItem.Descricao,
+                Preco = deletedItem.Preco,
+                Codigo = deletedItem.Codigo
+
+            };
+
+            return Ok(newItemDTO);
         }
     }
 }

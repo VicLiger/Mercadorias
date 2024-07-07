@@ -13,10 +13,10 @@ namespace MercadoriasAPI.Models
 
         [Required]
         [StringLength(250, ErrorMessage = "A descrição não poder ter mais de 250 caracteres")]
-        public string Descrição { get; set; }
+        public string Descricao { get; set; }
 
         [Required]
-        public decimal Preço { get; set; }
+        public decimal Preco { get; set; }
 
         [Required]
         public string Codigo { get; set; }
