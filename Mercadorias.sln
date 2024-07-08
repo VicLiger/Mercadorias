@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mercadorias.Infraestructure
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mercadorias.DependencyInjection", "Mercadorias.DependencyInjection\Mercadorias.DependencyInjection.csproj", "{1BA05F66-B086-4B52-80AE-8AE1D1105A10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mercadoria.Teste", "Mercadoria.Teste\Mercadoria.Teste.csproj", "{9F872FB4-C734-4329-BC85-E1B0E62B97FC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mercadoria.API", "Mercadoria.Teste\Mercadoria.API.csproj", "{9F872FB4-C734-4329-BC85-E1B0E62B97FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

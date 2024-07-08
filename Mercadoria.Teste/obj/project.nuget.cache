@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AoT2poy/nSA=",
+  "dgSpecHash": "9+WIaxdVfJE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Victor\\Documents\\C#\\Mercadorias\\Mercadoria.Teste\\Mercadoria.Teste.csproj",
+  "projectFilePath": "C:\\Users\\Victor\\Documents\\C#\\Mercadorias\\Mercadoria.Teste\\Mercadoria.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Victor\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Victor\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.6\\microsoft.entityframeworkcore.8.0.6.nupkg.sha512",

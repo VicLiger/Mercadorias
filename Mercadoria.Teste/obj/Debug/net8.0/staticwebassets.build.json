@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "UHhaoJj11npqTvn85nL99FQ1NMAxYSWp+/twZP7qu/4=",
-  "Source": "Mercadoria.Teste",
-  "BasePath": "_content/Mercadoria.Teste",
+  "Hash": "LhLuIAz5bYQxS4j+Q2oYegOYt5LgzD1DDskZKHMqsHA=",
+  "Source": "Mercadoria.API",
+  "BasePath": "_content/Mercadoria.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

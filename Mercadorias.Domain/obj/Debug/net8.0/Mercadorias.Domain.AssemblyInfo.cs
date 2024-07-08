@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mercadorias.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a090d77cec4201d52465aa31d9eed2e7f1a4bfd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+388ec5933fc45b7c9e9c995d4614e7a66557de6c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mercadorias.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mercadorias.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

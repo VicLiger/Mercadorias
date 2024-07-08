@@ -1246,9 +1246,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Victor\\Documents\\C#\\Mercadorias\\Mercadoria.Teste\\Mercadoria.Teste.csproj",
-      "projectName": "Mercadoria.Teste",
-      "projectPath": "C:\\Users\\Victor\\Documents\\C#\\Mercadorias\\Mercadoria.Teste\\Mercadoria.Teste.csproj",
+      "projectUniqueName": "C:\\Users\\Victor\\Documents\\C#\\Mercadorias\\Mercadoria.Teste\\Mercadoria.API.csproj",
+      "projectName": "Mercadoria.API",
+      "projectPath": "C:\\Users\\Victor\\Documents\\C#\\Mercadorias\\Mercadoria.Teste\\Mercadoria.API.csproj",
       "packagesPath": "C:\\Users\\Victor\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Victor\\Documents\\C#\\Mercadorias\\Mercadoria.Teste\\obj\\",
       "projectStyle": "PackageReference",
