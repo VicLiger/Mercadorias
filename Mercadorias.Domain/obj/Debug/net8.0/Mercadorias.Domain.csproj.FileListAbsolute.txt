@@ -1,0 +1,12 @@
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Domain\bin\Debug\net8.0\Mercadorias.Domain.deps.json
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Domain\bin\Debug\net8.0\Mercadorias.Domain.dll
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Domain\bin\Debug\net8.0\Mercadorias.Domain.pdb
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Domain\obj\Debug\net8.0\Mercadorias.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Domain\obj\Debug\net8.0\Mercadorias.Domain.AssemblyInfoInputs.cache
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Domain\obj\Debug\net8.0\Mercadorias.Domain.AssemblyInfo.cs
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Domain\obj\Debug\net8.0\Mercadorias.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Domain\obj\Debug\net8.0\Mercadorias.Domain.sourcelink.json
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Domain\obj\Debug\net8.0\Mercadorias.Domain.dll
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Domain\obj\Debug\net8.0\refint\Mercadorias.Domain.dll
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Domain\obj\Debug\net8.0\Mercadorias.Domain.pdb
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Domain\obj\Debug\net8.0\ref\Mercadorias.Domain.dll
