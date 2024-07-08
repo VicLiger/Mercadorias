@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mercadorias.API", "Mercadorias.API\Mercadorias.API.csproj", "{0F270913-88B0-4C53-BBD3-03C8B56E2BF5}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mercadorias.Domain", "Mercadorias.Domain\Mercadorias.Domain.csproj", "{62B9C89D-AA78-4C65-81ED-0E78A44D1D56}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mercadorias.Application", "Mercadorias.Application\Mercadorias.Application.csproj", "{08AC8435-F50B-4D38-9761-72A44D0F2A39}"
@@ -13,16 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mercadorias.Infraestructure
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mercadorias.DependencyInjection", "Mercadorias.DependencyInjection\Mercadorias.DependencyInjection.csproj", "{1BA05F66-B086-4B52-80AE-8AE1D1105A10}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mercadoria.Teste", "Mercadoria.Teste\Mercadoria.Teste.csproj", "{9F872FB4-C734-4329-BC85-E1B0E62B97FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0F270913-88B0-4C53-BBD3-03C8B56E2BF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0F270913-88B0-4C53-BBD3-03C8B56E2BF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0F270913-88B0-4C53-BBD3-03C8B56E2BF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0F270913-88B0-4C53-BBD3-03C8B56E2BF5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{62B9C89D-AA78-4C65-81ED-0E78A44D1D56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{62B9C89D-AA78-4C65-81ED-0E78A44D1D56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62B9C89D-AA78-4C65-81ED-0E78A44D1D56}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{1BA05F66-B086-4B52-80AE-8AE1D1105A10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BA05F66-B086-4B52-80AE-8AE1D1105A10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BA05F66-B086-4B52-80AE-8AE1D1105A10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F872FB4-C734-4329-BC85-E1B0E62B97FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F872FB4-C734-4329-BC85-E1B0E62B97FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F872FB4-C734-4329-BC85-E1B0E62B97FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F872FB4-C734-4329-BC85-E1B0E62B97FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

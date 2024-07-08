@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Mercadoria.Teste.props" />
+</Project>

@@ -4,6 +4,7 @@ using Mercadorias.Application.InterfacesDTO;
 using Mercadorias.Application.Mapping;
 using Mercadorias.Application.Services;
 using Mercadorias.Domain.Interfaces;
+using Mercadorias.Infraestructure.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,7 +27,7 @@ namespace Mercadorias.DependencyInjection.IoC
             services.AddDbContext<AppDbContext>(options =>
                 options.UseNpgsql(configuration.GetConnectionString("DefaultConnect")));
 
-            services.AddScoped<IItemRepository, IItemRepository>();
+            services.AddScoped<IItemRepository, ItemRepository>();
             services.AddScoped<IItemService, ItemService>();
 
             services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
