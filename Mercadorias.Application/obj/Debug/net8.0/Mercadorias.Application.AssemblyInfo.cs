@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mercadorias.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a005b6209a9fba5ff74091ce61bb0987d69a39c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b3181ae7d91fc537cbdbc5e431daaa9d6fd5051")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mercadorias.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mercadorias.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
