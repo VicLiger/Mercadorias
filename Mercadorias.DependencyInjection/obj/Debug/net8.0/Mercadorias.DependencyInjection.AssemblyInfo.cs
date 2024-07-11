@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mercadorias.DependencyInjection")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+388ec5933fc45b7c9e9c995d4614e7a66557de6c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a005b6209a9fba5ff74091ce61bb0987d69a39c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mercadorias.DependencyInjection")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mercadorias.DependencyInjection")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

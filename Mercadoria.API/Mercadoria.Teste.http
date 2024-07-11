@@ -1,6 +1,0 @@
-@Mercadoria.Teste_HostAddress = http://localhost:5084
-
-GET {{Mercadoria.Teste_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
