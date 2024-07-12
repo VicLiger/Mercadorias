@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MercadoriasAPI", "MercadoriasAPI\MercadoriasAPI.csproj", "{DA9E514D-F53F-43CD-877F-47849293DD33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mercadorias.Domain", "Mercadorias.Domain\Mercadorias.Domain.csproj", "{62B9C89D-AA78-4C65-81ED-0E78A44D1D56}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mercadorias.Application", "Mercadorias.Application\Mercadorias.Application.csproj", "{08AC8435-F50B-4D38-9761-72A44D0F2A39}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mercadorias.Infraestructure", "Mercadoria.Infraestructure\Mercadorias.Infraestructure.csproj", "{29B45347-4227-4E53-82F3-5BD7BB4816A1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mercadorias.DependencyInjection", "Mercadorias.DependencyInjection\Mercadorias.DependencyInjection.csproj", "{1BA05F66-B086-4B52-80AE-8AE1D1105A10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mercadorias.Api", "Mercadorias.Api\Mercadorias.Api.csproj", "{B882225A-CF3A-496A-81B4-CC81C235AAE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +19,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DA9E514D-F53F-43CD-877F-47849293DD33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DA9E514D-F53F-43CD-877F-47849293DD33}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DA9E514D-F53F-43CD-877F-47849293DD33}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DA9E514D-F53F-43CD-877F-47849293DD33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62B9C89D-AA78-4C65-81ED-0E78A44D1D56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62B9C89D-AA78-4C65-81ED-0E78A44D1D56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62B9C89D-AA78-4C65-81ED-0E78A44D1D56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62B9C89D-AA78-4C65-81ED-0E78A44D1D56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08AC8435-F50B-4D38-9761-72A44D0F2A39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08AC8435-F50B-4D38-9761-72A44D0F2A39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08AC8435-F50B-4D38-9761-72A44D0F2A39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08AC8435-F50B-4D38-9761-72A44D0F2A39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29B45347-4227-4E53-82F3-5BD7BB4816A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29B45347-4227-4E53-82F3-5BD7BB4816A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29B45347-4227-4E53-82F3-5BD7BB4816A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29B45347-4227-4E53-82F3-5BD7BB4816A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BA05F66-B086-4B52-80AE-8AE1D1105A10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BA05F66-B086-4B52-80AE-8AE1D1105A10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BA05F66-B086-4B52-80AE-8AE1D1105A10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BA05F66-B086-4B52-80AE-8AE1D1105A10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B882225A-CF3A-496A-81B4-CC81C235AAE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B882225A-CF3A-496A-81B4-CC81C235AAE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B882225A-CF3A-496A-81B4-CC81C235AAE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B882225A-CF3A-496A-81B4-CC81C235AAE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

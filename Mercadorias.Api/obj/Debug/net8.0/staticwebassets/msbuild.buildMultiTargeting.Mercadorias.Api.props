@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Mercadorias.Api.props" />
+</Project>

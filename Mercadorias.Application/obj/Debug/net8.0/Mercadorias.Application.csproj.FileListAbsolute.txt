@@ -1,0 +1,16 @@
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Application\bin\Debug\net8.0\Mercadorias.Application.deps.json
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Application\bin\Debug\net8.0\Mercadorias.Application.dll
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Application\bin\Debug\net8.0\Mercadorias.Application.pdb
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Application\bin\Debug\net8.0\Mercadorias.Domain.dll
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Application\bin\Debug\net8.0\Mercadorias.Domain.pdb
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Application\obj\Debug\net8.0\Mercadorias.Application.csproj.AssemblyReference.cache
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Application\obj\Debug\net8.0\Mercadorias.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Application\obj\Debug\net8.0\Mercadorias.Application.AssemblyInfoInputs.cache
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Application\obj\Debug\net8.0\Mercadorias.Application.AssemblyInfo.cs
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Application\obj\Debug\net8.0\Mercadorias.Application.csproj.CoreCompileInputs.cache
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Application\obj\Debug\net8.0\Mercadorias.Application.sourcelink.json
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Application\obj\Debug\net8.0\Mercador.255F2E8A.Up2Date
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Application\obj\Debug\net8.0\Mercadorias.Application.dll
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Application\obj\Debug\net8.0\refint\Mercadorias.Application.dll
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Application\obj\Debug\net8.0\Mercadorias.Application.pdb
+C:\Users\Victor\Documents\C#\Mercadorias\Mercadorias.Application\obj\Debug\net8.0\ref\Mercadorias.Application.dll
